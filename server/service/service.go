@@ -3,7 +3,7 @@ package service
 import (
 	"context"
 	"fmt"
-	"getting-statistics-mirea/entity"
+	"getting-statistics-mirea/server/entity"
 	"github.com/chromedp/cdproto/cdp"
 	"github.com/chromedp/chromedp"
 	"log"

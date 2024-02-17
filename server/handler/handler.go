@@ -1,8 +1,8 @@
 package handler
 
 import (
-	"getting-statistics-mirea/entity"
-	"getting-statistics-mirea/service"
+	"getting-statistics-mirea/server/entity"
+	"getting-statistics-mirea/server/service"
 	"github.com/gin-gonic/gin"
 	"io/ioutil"
 	"net/http"

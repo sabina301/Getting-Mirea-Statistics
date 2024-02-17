@@ -1,9 +1,10 @@
 package main
 
 import (
-	"getting-statistics-mirea/handler"
-	"getting-statistics-mirea/router"
-	"getting-statistics-mirea/service"
+	"getting-statistics-mirea/server/handler"
+	"getting-statistics-mirea/server/router"
+	service "getting-statistics-mirea/server/service"
+	"log"
 )
 
 func main() {
@@ -12,6 +13,8 @@ func main() {
 	h := handler.NewHandler(s)
 	r := router.InitRouter(h)
 
-	router.Start(r, "0.0.0.0:8080")
+	if err := router.Start(r, "0.0.0.0:8080"); err != nil {
+		log.Fatal("Cant start")
+	}
 
 }
