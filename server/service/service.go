@@ -19,6 +19,7 @@ type Service struct {
 }
 
 func (s *Service) GetResultService(email string, password string, number string) *entity.Statistics {
+
 	ctx, cancel := chromedp.NewContext(context.Background())
 	defer cancel()
 
@@ -56,7 +57,7 @@ func (s *Service) GetResultService(email string, password string, number string)
 	}
 
 	var userNodes []*cdp.Node
-
+	countPlus, countMinus, countN = 0, 0, 0
 	for _, node := range nodes {
 		hr, _ := node.Attribute("href")
 
